@@ -23,6 +23,16 @@ function meuEscopo() {
 
         console.log( pessoas )
         
+        pessoas.push({
+            nome: nome.value,
+            sobrenome: sobrenome.value,
+            peso: peso.value,
+            altura: altura.value,
+        })
+
+        resutado.innerHTML += `<p>${nome.value} ${sobrenome.value} 
+                        ${peso.value}     ${altura.value}</p>`
+
 
 
     }
