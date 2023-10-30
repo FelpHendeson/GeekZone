@@ -9,6 +9,14 @@ body {
     color: aqua;
 }
 
+.container {
+    color: black;
+    max-width:  640px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+}
+
 input, label {
     display: block;
 }
