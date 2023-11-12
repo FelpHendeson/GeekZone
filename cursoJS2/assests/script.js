@@ -9,9 +9,8 @@ function criaLi() {
 
 inputTarefa.addEventListener('keypress', function(e) {
     if (e.keyCode === 13) {
-        if (!inputTarefa.value) {
-            criaTarefa(inputTarefa.value);        
-        }
+        if (!inputTarefa.value) return;
+        criaTarefa(inputTarefa.value);
     }
 });
 
@@ -20,11 +19,19 @@ function limpaCampo() {
     inputTarefa.focus();
 };
 
+function criaBtnDelete(li) {
+    li.innerText += ' ';
+    const btnDelete = document.createElement('button');
+    btnDelete.innerText = 'Deletar';
+    li.appendChild(btnDelete);
+}
+
 function criaTarefa(textoinput) {
     const li = criaLi();
     li.innerText = textoinput;
     tarefas.appendChild(li);
     limpaCampo();
+    criaBtnDelete(li);
 };
 
 btnTarefa.addEventListener('click', function () {
