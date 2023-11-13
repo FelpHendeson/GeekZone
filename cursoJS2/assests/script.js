@@ -19,6 +19,13 @@ function limpaCampo() {
   inputTarefa.focus();
 }
 
+function criaBtnDelete(li) {
+    li.innerText += ' ';
+    const btnDelete = document.createElement('button');
+    btnDelete.innerText = 'Deletar';
+    li.appendChild(btnDelete);
+}
+
 function criaTarefa(textoinput) {
   const li = criaLi();
   li.innerText = textoinput;
