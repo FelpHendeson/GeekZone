@@ -2,6 +2,8 @@ const inputTarefa = document.querySelector(".input-tarefa");
 const btnTarefa = document.querySelector(".btn-tarefa");
 const tarefas = document.querySelector(".tarefas");
 
+carregaTarefas();
+
 function criaLi() {
   const li = document.createElement("li");
   return li;
@@ -24,6 +26,7 @@ function criaBtnDelete(li) {
     const btnDelete = document.createElement('button');
     btnDelete.innerText = 'Deletar';
     btnDelete.setAttribute('class', 'delete');
+    btnDelete.setAttribute('id', 'btnDelete');
     btnDelete.setAttribute('title', 'Deleta está tarefa')
     li.appendChild(btnDelete);
 };
@@ -46,6 +49,7 @@ document.addEventListener('click', function(e) {
   const el = e.target;
   if( el.classList.contains('delete')) {
     el.parentElement.remove();
+    salvarTarefas();
   }
 });
 
@@ -61,4 +65,13 @@ function salvarTarefas() {
 
   const tarefasJSON = JSON.stringify(listaDeTarefas);
   localStorage.setItem('tarefas', tarefasJSON);
+};
+
+function carregaTarefas() {
+  const tarefas = localStorage.getItem('tarefas');
+  const listaDeTarefas = JSON.parse(tarefas);
+
+  for (let tarefa of listaDeTarefas) {
+    criaTarefa(tarefa);
+  };
 };
