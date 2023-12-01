@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>Felipe Developer Systems</title>
+    <title>Felipe Developer Systems - Aula 5</title>
 </head>
 <body>
+    <a href="../cursoJS3/index.html">Volte Uma Aula</a>
+    <section class="container">
+        <h1>Formulário de Cadastro</h1>
+        <h2><small>Instruções</small></h2>
+        <ul>
+            <li>Nenhum campo pode estar vazio</li>
+            <li>Usuário só poderá conter letras e/ou números</li>
+            <li>Usuário deverá conter entre 3 e 12 caracteres</li>
+            <li>Senha precisa ter entre 6 e 12 caracteres</li>
+        </ul>
+        <form action="/" method="POST" class="formulario">
+            <label for="inptNome">Nome</label>
+            <input type="text" name="inptNome" id="inptNome" class="nome">
+            <label for="inptSobrenome">Sobrenome</label>
+            <input type="text" name="inptSobrenome" id="inptSobrenome" class="sobrenome">
+            <label for="inptCPF">CPF</label>
+            <input type="text" name="inptCPF" id="inptCPF" class="cpf">
+            <label for="inptUsuario">Usuário</label>
+            <input type="text" name="inptUsuario" id="inptUsuario" class="usuario">
+            <label for="inptSenha">Senha</label>
+            <input type="password" name="inptSenha" id="inptSenha" class="senha">
+            <label for="inptRepetirSenha">Repetir Senha</label>
+            <input type="password" name="inptRepetirSenha" id="inptRepetirSenha" class="repetir-senha">
+            <button type="submit">Enviar</button>
+            
+        </form>
+    </section>
     <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
