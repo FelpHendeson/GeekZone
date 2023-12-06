@@ -18,7 +18,10 @@ falaFrase('Instânciando conexão com Banco de Dados', 1600)
     })
     .then(resposta => {
         console.log(resposta);
-        return falaFrase(2004, 1600);
+        return falaFrase('Status: Conetado\nSegurânça: Nível 0(Segurânça Máxima)', 1600);
+    })
+    .then(resposta => {
+        console.log(resposta)
     })
     .then(() => {
         console.log('Construa sua querry')
