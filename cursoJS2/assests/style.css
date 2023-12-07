@@ -79,3 +79,17 @@ form button:hover {
     background: aqua;
     color: #000;
 }
+
+#btnDelete:hover {
+    cursor: pointer;
+    background-color: red;
+    color: #000;
+    transition: 2s;
+}
+
+#btn-tarefa:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+    color: #000;
+    transition: 2s;
+}

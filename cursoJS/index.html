@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Felipe Developer</title>
+    <title>Felipe Developer Systems - Aula 1</title>
 </head>
 
 <body>
-    <head>
-        <h1>Felipe Developer</h1>
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">SOBRE</a></li>
-                <li><a href="#">CONTATO</a></li>
-            </ul>
-        </nav>
-    </head>
+    <h1>Felipe Developer</h1>
+    <a href="../cursoJS2/index.html">Avançe Uma Aula</a>
+    <section class="container" id="container">
+        <h1>Calcula IMC</h1>
+        <form action="/" method="POST" id="form">
+            <label for="peso">Peso</label>
+            <input type="text" name="peso" id="peso">
+            <label for="altura">Altura</label>
+            <input type="text" name="altura" id="altura">
+            <button type="submit" >Enviar</button>
+        </form>
+
+        <div id="resultado"></div>
+    </section>
+    <div id="log"></div>
     <script src="index.js"></script>
 </body>
 
